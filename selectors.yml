@@ -1,0 +1,80 @@
+name:
+    css: '#productTitle'
+    type: Text
+
+
+list_price:
+    css: span.priceBlockStrikePriceString
+    xpath: '//span[contains(concat(" ",normalize-space(@class)," ")," priceBlockStrikePriceString ")]'
+    type: Text
+deal_price:
+    css: 'td.a-span12 span.a-size-medium.a-color-price'
+    xpath: '//td[contains(concat(" ",normalize-space(@class)," ")," a-span12 ")]//span[contains(concat(" ",normalize-space(@class)," ")," priceBlockDealPriceString ")][@id="priceblock_dealprice"]'
+    type: Text
+saving:
+    css: td.priceBlockSavingsString
+    xpath: null
+    type: Text
+ratings:
+    css: 'span.a-declarative a.a-link-normal span[id="acrCustomerReviewText"]'
+    xpath: null
+    type: Text
+rating_details:
+    css: 'span.celwidget span.a-size-base'
+    xpath: null
+    type: Text
+stars:
+    css: 'span[id="acrPopover"] a.a-popover-trigger'
+    xpath: null
+    type: Text
+badge:
+    css: a.badge-link
+    xpath: null
+    type: Text
+price:
+    css: 'td.a-span12 span.priceBlockBuyingPriceString[id="priceblock_ourprice"]'
+    xpath: null
+    type: Text
+description:
+    css: 'div.centerColAlign div[id="feature-bullets"]'
+    xpath: null
+    multiple: true
+    type: Text
+product_description:
+    css: 'hza\:getweblabtreatment div[id="productDescription"]'
+    xpath: null
+    type: Text
+
+
+
+
+short_description:
+    css: '#featurebullets_feature_div'
+    type: Text
+images:
+    css: '.imgTagWrapper img'
+    type: Attribute
+    attribute: data-a-dynamic-image
+
+variants:
+    css: 'form.a-section li'
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: ""
+            type: Attribute
+            attribute: title
+        asin:
+            css: ""
+            type: Attribute
+            attribute: data-defaultasin
+product_description_old:
+    css: '#productDescription'
+    type: Text
+sales_rank:
+    css: 'li#SalesRank'
+    type: Text
+link_to_all_reviews:
+    css: 'div.card-padding a.a-link-emphasis'
+    type: Link
